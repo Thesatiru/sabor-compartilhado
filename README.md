@@ -19,4 +19,4 @@ O sistema permite cadastrar receitas, listar ingredientes, passo a passo e busca
 ### Frontend (Interface)
 - **Linguagem:** TypeScript
 - **Framework:** Angular
-- **Estilização:** CSS Modules / Tailwind / Styled Components
+- **Estilização:** CSS

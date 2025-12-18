@@ -7,6 +7,7 @@ import org.springframework.stereotype.Service;
 
 import com.example.sabor_compartilhado.Model.Cuisine;
 import com.example.sabor_compartilhado.Repository.CuisineRepository;
+import com.example.sabor_compartilhado.dto.CuisineDto;
 
 @Service
 public class CuisineService {
@@ -17,7 +18,10 @@ public class CuisineService {
         return cuisineRepository.findAll();
     }
 
-    public Cuisine save(Cuisine cuisine){
+    public Cuisine save(CuisineDto dto){
+        Cuisine cuisine = new Cuisine();
+        cuisine.setName(dto.getName());
+
         return cuisineRepository.save(cuisine);
     }
 }

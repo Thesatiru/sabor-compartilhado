@@ -3,8 +3,6 @@ package com.example.sabor_compartilhado.dto;
 import lombok.Data;
 
 @Data
-public class UserDto {
+public class CuisineRequestDto {
     private String name;
-    private String email;
-    private String password;
 }

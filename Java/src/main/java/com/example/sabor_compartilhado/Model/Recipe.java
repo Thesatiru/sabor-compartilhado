@@ -39,8 +39,9 @@ public class Recipe {
     // strategy = GenerationType.IDENTITY: Especifica que a geração do valor será delegada ao Banco de Dados,
     // usando o recurso de auto-incremento nativo do MySQL (AUTO_INCREMENT).
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private long id; // Convenção em Java é usar 'id' minúsculo.
+    private Long id; // Convenção em Java é usar 'id' minúsculo.
 
+    private String resume;
     private String name;
     private String description;
     private Integer timePreparationMinutes; // Coluna 'time_preparation_minutes' no banco.

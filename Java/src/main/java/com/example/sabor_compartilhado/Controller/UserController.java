@@ -10,29 +10,27 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
-import com.example.sabor_compartilhado.Service.CuisineService;
-import com.example.sabor_compartilhado.dto.CuisineRequestDto;
-import com.example.sabor_compartilhado.dto.CuisineResponseDto;
-
+import com.example.sabor_compartilhado.Service.UserService;
+import com.example.sabor_compartilhado.dto.UserRequestDto;
+import com.example.sabor_compartilhado.dto.UserResponseDto;
 
 @RestController
-@RequestMapping("/api/cuisines")
+@RequestMapping("/api/users")
 @CrossOrigin(origins = "*")
-public class CuisineController {
-
+public class UserController {
     @Autowired
-    private CuisineService cuisineService;
+    private UserService userService;
 
     @GetMapping
-    public List<CuisineResponseDto> getAll(){
-        return cuisineService.listAll();
+    public List<UserResponseDto> getAll(){
+        return userService.listAll();
     }
 
     @PostMapping
-    public ResponseEntity<String> create(@RequestBody CuisineRequestDto dto){
-        cuisineService.save(dto);
+    public ResponseEntity<String> create(@RequestBody UserRequestDto dto){
+        userService.save(dto);
 
-        return ResponseEntity.status(201).body("Culinária cadastrada com sucesso!");
-
+        return ResponseEntity.status(201).body("Usuário cadastrado com sucesso!");
     }
+
 }
